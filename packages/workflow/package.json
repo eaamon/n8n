@@ -18,7 +18,7 @@
     "dev": "pnpm watch",
     "typecheck": "tsc --noEmit",
     "build:vite": "vite build",
-    "build": "tsc --build tsconfig.build.esm.json tsconfig.build.cjs.json",
+    "build": " node --max-old-space-size=4096node_modules/.bin tsc --build tsconfig.build.esm.json tsconfig.build.cjs.json",
     "format": "biome format --write .",
     "format:check": "biome ci .",
     "lint": "eslint src --quiet",
